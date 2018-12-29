@@ -1,0 +1,8 @@
+<h1>My Golden Thoughts</h1>
+<ul>
+  <li *ngFor="let thought of thoughts; let i = index">{{thought}}
+    <button (click)="removeThought(i)">Remove</button>
+  </li>
+</ul>
+<input type="text" [value]="text" (input)="text = $event.target.value">
+<button (click)="addThought()">Add</button>
